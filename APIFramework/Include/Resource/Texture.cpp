@@ -1,7 +1,10 @@
 #include "Texture.h"
 #include "../Core/PathManager.h"
 
-CTexture::CTexture()
+CTexture::CTexture() :
+	m_hMemDC(NULL),
+	m_bColorKeyEnable(false),
+	m_ColorKey(RGB(255, 0, 255))
 {
 }
 
@@ -31,3 +34,16 @@ bool CTexture::LoadTexture(HINSTANCE hInst, HDC hDC, const wchar_t* pFileName, c
 	GetObject(m_hBitMap, sizeof(m_tInfo), &m_tInfo);
 	return true;
 }
+
+void CTexture::SetColorKey(unsigned char r, unsigned char g, unsigned char b)
+{
+	m_ColorKey = RGB(r, g, b);
+	m_bColorKeyEnable = true;
+}
+
+void CTexture::SetColorKey(COLORREF colorKey)
+{
+	m_ColorKey = colorKey;
+	m_bColorKeyEnable = true;
+}
+

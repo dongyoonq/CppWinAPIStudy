@@ -1,4 +1,4 @@
-#include "ResourceManager.h"
+ï»¿#include "ResourceManager.h"
 #include "Texture.h"
 
 DEFINITION_SINGLE(CResourceManager);
@@ -25,7 +25,7 @@ bool CResourceManager::Init(HINSTANCE hInst, HDC hDC)
 	m_hInst = hInst;
 	m_hDC = hDC;
 
-	// ¹é¹öÆÛ¸¦ ºÒ·¯¿Â´Ù.
+	// ï¿½ï¿½ï¿½ï¿½Û¸ï¿½ ï¿½Ò·ï¿½ï¿½Â´ï¿½.
 	m_pBackBuffer = LoadTexture("BackBuffer", L"BackBuffer.bmp");
 
 	return true;

@@ -18,4 +18,3 @@ public:
 		const string& strPathKey = TEXTURE_PATH);
 	class CTexture* FindTexture(const string& strKey);
 };
-
