@@ -1,2 +1,2 @@
 # CppWinAPIStudy
-C++ 에서 WinAPI를 공부하는 프로젝트입니다.
+2021년도의 C++ 에서 WinAPI 공부한 내용을 공부하는 프로젝트 입니다.
