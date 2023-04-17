@@ -2,8 +2,8 @@
 #include "Scene/SceneManager.h"
 #include "Core/Timer.h"
 #include "Core/PathManager.h"
-#include "Resources/ResourcesManager.h"
-#include "Resources/Texture.h"
+#include "Resource/ResourceManager.h"
+#include "Resource/Texture.h"
 #include "Core/Camera.h"
 #include "Core/Input.h"
 
@@ -17,7 +17,7 @@ CCore::CCore() {
 
 CCore::~CCore() {
     DESTROY_SINGLE(CSceneManager);
-    DESTROY_SINGLE(CResourcesManager);
+    DESTROY_SINGLE(CResourceManager);
     DESTROY_SINGLE(CPathManager);
     DESTROY_SINGLE(CInput);
     DESTROY_SINGLE(CTimer);
@@ -53,7 +53,7 @@ bool CCore::Init(HINSTANCE hInst) {
         return false;
 
     // 리소스관리자 초기화
-    if (!GET_SINGLE(CResourcesManager)->Init(hInst, m_hDC))
+    if (!GET_SINGLE(CResourceManager)->Init(hInst, m_hDC))
         return false;
 
     // 장면관리자 초기화
@@ -128,7 +128,7 @@ void CCore::Collision(float fDeltaTime)
 
 void CCore::Render(float fDeltaTime)
 {
-    CTexture* pBackBuffer = GET_SINGLE(CResourcesManager)->getBackBuffer();
+    CTexture* pBackBuffer = GET_SINGLE(CResourceManager)->GetBackBuffer();
     
     Rectangle(pBackBuffer->GetDC(), 0, 0, m_tRS.iW, m_tRS.iH);
     GET_SINGLE(CSceneManager)->Render(pBackBuffer->GetDC(), fDeltaTime);

@@ -1,5 +1,5 @@
 #include "Bullet.h"
-#include "../Resources/Texture.h"
+#include "../Resource/Texture.h"
 
 CBullet::CBullet() :
 	m_fDist(0.f),

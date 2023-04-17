@@ -2,8 +2,8 @@
 #include "../Scene/Layer.h"
 #include "../Scene/SceneManager.h"
 #include "../Scene/Scene.h"
-#include "../Resources/ResourcesManager.h"
-#include "../Resources/Texture.h"
+#include "../Resource/ResourceManager.h"
+#include "../Resource/Texture.h"
 #include "../Core/Camera.h"
 
 list<CObj*> CObj::m_ObjList;
@@ -93,7 +93,7 @@ void CObj::SetTexture(CTexture* pTexture)
 void CObj::SetTexture(const string& strKey, const wchar_t* pFileName, const string& strPathKey)
 {
 	SAFE_RELEASE(m_pTexture);
-	m_pTexture = GET_SINGLE(CResourcesManager)->
+	m_pTexture = GET_SINGLE(CResourceManager)->
 		LoadTexture(strKey, pFileName, strPathKey);
 }
 

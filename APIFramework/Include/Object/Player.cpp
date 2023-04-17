@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "../Core/Input.h"
+#include "../Resource/Texture.h"
 
 CPlayer::CPlayer()
 {

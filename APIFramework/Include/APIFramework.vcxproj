@@ -161,8 +161,8 @@
     <ClCompile Include="Object\Player.cpp" />
     <ClCompile Include="Object\Stage.cpp" />
     <ClCompile Include="Object\StaticObj.cpp" />
-    <ClCompile Include="Resources\ResourcesManager.cpp" />
-    <ClCompile Include="Resources\Texture.cpp" />
+    <ClCompile Include="Resource\ResourceManager.cpp" />
+    <ClCompile Include="Resource\Texture.cpp" />
     <ClCompile Include="Scene\InGameScene.cpp" />
     <ClCompile Include="Scene\Layer.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
@@ -186,8 +186,8 @@
     <ClInclude Include="Object\Stage.h" />
     <ClInclude Include="Object\StaticObj.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="Resources\ResourcesManager.h" />
-    <ClInclude Include="Resources\Texture.h" />
+    <ClInclude Include="Resource\ResourceManager.h" />
+    <ClInclude Include="Resource\Texture.h" />
     <ClInclude Include="Scene\InGameScene.h" />
     <ClInclude Include="Scene\Layer.h" />
     <ClInclude Include="Scene\Scene.h" />

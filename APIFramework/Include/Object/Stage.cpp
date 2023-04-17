@@ -1,5 +1,5 @@
 #include "Stage.h"
-#include "../Resources/Texture.h"
+#include "../Resource/Texture.h"
 #include "../Core.h"
 #include "../Core/Camera.h"
 
